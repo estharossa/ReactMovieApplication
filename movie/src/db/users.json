@@ -1,0 +1,72 @@
+{
+  "people": [
+    {
+      "id": 0,
+      "username": "estharossa",
+      "password": "123",
+      "favourites": [
+        {
+          "id": 590995,
+          "title": "The Craft: Legacy",
+          "poster_path": "/lhMIra0pqWNuD6CIXoTmGwZ0EBS.jpg",
+          "vote_average": 6.3,
+          "overview": "An eclectic foursome of aspiring teenage witches get more than they bargained for as they lean into their newfound powers."
+        },
+        {
+          "id": 531219,
+          "title": "Roald Dahl's The Witches",
+          "poster_path": "/betExZlgK0l7CZ9CsCBVcwO1OjL.jpg",
+          "vote_average": 6.9,
+          "overview": "In late 1967, a young orphaned boy goes to live with his loving grandma in the rural Alabama town of Demopolis. As the boy and his grandmother encounter some deceptively glamorous but thoroughly diabolical witches, she wisely whisks him away to a seaside resort. Regrettably, they arrive at precisely the same time that the world's Grand High Witch has gathered."
+        },
+        {
+          "id": 646593,
+          "title": "Wander",
+          "poster_path": "/2AwPvNHphpZBJDqjZKVuMAbvS0v.jpg",
+          "vote_average": 5.6,
+          "overview": "After getting hired to probe a suspicious death in the small town of Wander, a mentally unstable private investigator becomes convinced the case is linked to the same 'conspiracy cover up' that caused the death of his daughter."
+        },
+        {
+          "id": 294963,
+          "title": "Bone Tomahawk",
+          "poster_path": "/ifdPXLsGmdspNOonv3DwU5pbyVC.jpg",
+          "vote_average": 6.8,
+          "overview": "During a shootout in a saloon, Sheriff Hunt injures a suspicious stranger. One of the villagers takes care of him in prison. One day they both disappear – only the spear of a cannibal tribe is found. Hunt and a few of his men go in search of the prisoner and his nurse."
+        },
+        {
+          "id": 590706,
+          "title": "Jiu Jitsu",
+          "poster_path": "/eLT8Cu357VOwBVTitkmlDEg32Fs.jpg",
+          "vote_average": 5.7,
+          "overview": "Every six years, an ancient order of jiu-jitsu fighters joins forces to battle a vicious race of alien invaders. But when a celebrated war hero goes down in defeat, the fate of the planet and mankind hangs in the balance."
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "username": "test",
+      "password": "123",
+      "favourites": [
+        {
+          "id": 590995,
+          "title": "The Craft: Legacy",
+          "poster_path": "/lhMIra0pqWNuD6CIXoTmGwZ0EBS.jpg",
+          "vote_average": 6.2,
+          "overview": "An eclectic foursome of aspiring teenage witches get more than they bargained for as they lean into their newfound powers."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "username": "daniyar",
+      "password": "123",
+      "favourites": []
+    },
+    {
+      "id": 3,
+      "username": "dora",
+      "password": "123",
+      "favourites": []
+    }
+  ]
+}
