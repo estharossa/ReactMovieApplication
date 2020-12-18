@@ -67,6 +67,12 @@
       "username": "dora",
       "password": "123",
       "favourites": []
+    },
+    {
+      "id": 4,
+      "username": "abylai",
+      "password": "tigr",
+      "favourites": []
     }
   ]
 }
