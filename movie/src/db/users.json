@@ -73,6 +73,12 @@
       "username": "abylai",
       "password": "tigr",
       "favourites": []
+    },
+    {
+      "id": 5,
+      "username": "abylay",
+      "password": "tigr",
+      "favourites": []
     }
   ]
 }
