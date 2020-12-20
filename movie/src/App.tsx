@@ -1,20 +1,23 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
-import Login from "./Authorization/Login";
-import Register from "./Authorization/Register";
 import AuthContext from "./Context/AuthContext";
 import instance from "./db/axios";
-import Movies from "./MoviesList/Movies";
 import User from "./Model/User";
-import NavBar from './navigation/Navbar';
-import Account from "./Authorization/Account";
-import MovieDetails from "./MovieDetails/MovieDetails";
 import Details from "./Model/Details";
 import AuthState from "./Model/AuthState";
-import Favourites from "./FavouritesMovies/Favourites";
 
 const API_USERS = '/people'
+
+// lazy initialaztion
+
+const LoginPage = lazy(() => import("./Authorization/Login"))
+const RegistrationPage = lazy(() => import("./Authorization/Register"))
+const MoviesPage = lazy(() => import("./MoviesList/Movies"))
+const AccountPage = lazy(() => import("./Authorization/Account"))
+const NavigationBar = lazy(() => import("./navigation/Navbar"))
+const MovieDetailsPage = lazy(() => import("./MovieDetails/MovieDetails"))
+const FavouritesPage = lazy(() => import("./FavouritesMovies/Favourites"))
 
 function App() {
   const [users, setUsers] = useState<User[]>([])
@@ -66,36 +69,35 @@ function App() {
   return (
       <AuthContext.Provider value={isLogged}>
         <Router>
-          <NavBar />
-          <div className="container">
-            <Suspense fallback={<h1>Loading Route ...</h1>}>
-              <Switch>
-                <Route path="/" exact component={Movies} />
+          <Suspense fallback={<h1>Loading Route ...</h1>}>
+            <NavigationBar />
+              <div className="container">
+                  <Switch>
+                    <Route path="/" exact component={MoviesPage} />
 
-                <Route path="/login">
-                  <Login login={authenticateUser}></Login>
-                </Route>
+                    <Route path="/login">
+                      <LoginPage login={authenticateUser} />
+                    </Route>
 
-                <Route path="/register">
-                  <Register lastIndex={users.length} register={registerUser}></Register>
-                </Route>
+                    <Route path="/register">
+                      <RegistrationPage lastIndex={users.length} register={registerUser} />
+                    </Route>
 
-                <Route path="/account">
-                  <Account logout={logoutUser}></Account>
-                </Route>
-                
-                <Route path="/favourites">
-                  <Favourites></Favourites>
-                </Route>
+                    <Route path="/account">
+                      <AccountPage logout={logoutUser} />
+                    </Route>
+                    
+                    <Route path="/favourites">
+                      <FavouritesPage />
+                    </Route>
 
-                <Route path="/:id">
-                  <MovieDetails add={addToFavourites}></MovieDetails>
-                </Route>
+                    <Route path="/:id">
+                      <MovieDetailsPage add={addToFavourites} />
+                    </Route>
 
-
-              </Switch>
+                  </Switch>
+              </div>
             </Suspense>
-          </div>
         </Router>
       </AuthContext.Provider>
   );
