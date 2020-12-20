@@ -46,6 +46,7 @@ function App() {
   async function registerUser(user: User) {
     const isPresent = users.find((u) => u.username === user.username && u.password === user.password) != null
     if (isPresent) {
+      // TODO handle case when the user is already registered
       return
     }
     const result = await instance.post(API_USERS, user)

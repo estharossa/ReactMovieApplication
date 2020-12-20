@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useState } from 'react'
+import React, { Fragment, ReactElement, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import findMovieApi from '../Api/FindMovieApi'
 import movieApi from '../Api/MovieApi'
@@ -46,15 +46,17 @@ function Movies(): ReactElement {
             </div>
             <div className={'movies-container'}>
                 {movies && movies.map(({id, title, poster_path, vote_average}) => (
-                <Link to={'/'+id} key={id} className={'movie-item'} >
-                    <div className={'movie-item-image-container'}>
-                        <img className={'movie-item-image'} src={'https://image.tmdb.org/t/p/w500' + poster_path} />
-                    </div>
-                    <div className={'movie-item-title-container'}>
-                        <h3 className={'movie-item-title'}>{title}</h3>
-                        <h4 className={getVoteAverageClass(vote_average)}>{vote_average}</h4>
-                    </div>
-                </Link>
+                    <Fragment key={id} >
+                        <Link to={'/'+id} className={'movie-item'} >
+                            <div className={'movie-item-image-container'}>
+                                <img className={'movie-item-image'} src={'https://image.tmdb.org/t/p/w500' + poster_path} />
+                            </div>
+                            <div className={'movie-item-title-container'}>
+                                <h3 className={'movie-item-title'}>{title}</h3>
+                                <h4 className={getVoteAverageClass(vote_average)}>{vote_average}</h4>
+                            </div>
+                        </Link>
+                    </Fragment>
                 ))}
             </div>
         </div>
