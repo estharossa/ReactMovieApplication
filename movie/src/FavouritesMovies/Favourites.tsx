@@ -1,4 +1,4 @@
-import React, { Fragment, ReactElement, useContext, useEffect, useState } from 'react'
+import React, {Fragment, ReactElement, useContext, useEffect, useReducer, useState} from 'react'
 import { Link } from 'react-router-dom'
 import AuthContext from '../Context/AuthContext'
 import '../MoviesList/Movies.css'
