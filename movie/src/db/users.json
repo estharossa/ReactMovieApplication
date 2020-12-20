@@ -39,6 +39,165 @@
           "poster_path": "/eLT8Cu357VOwBVTitkmlDEg32Fs.jpg",
           "vote_average": 5.7,
           "overview": "Every six years, an ancient order of jiu-jitsu fighters joins forces to battle a vicious race of alien invaders. But when a celebrated war hero goes down in defeat, the fate of the planet and mankind hangs in the balance."
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/zMcEalkxEiRjvmijliLBk0sYern.jpg",
+          "belongs_to_collection": null,
+          "budget": 0,
+          "genres": [
+            {
+              "id": 35,
+              "name": "Comedy"
+            },
+            {
+              "id": 80,
+              "name": "Crime"
+            },
+            {
+              "id": 53,
+              "name": "Thriller"
+            }
+          ],
+          "homepage": "http://www.netflix.com/title/81342028",
+          "id": 765123,
+          "imdb_id": "tt13446424",
+          "original_language": "de",
+          "original_title": "Wir Können Nicht Anders",
+          "overview": "A man foils an attempted murder, then flees the crew of would-be killers along with their intended target as a woman he's just met tries to find him.",
+          "popularity": 1323.562,
+          "poster_path": "/ajKpYK7XdzIYjy9Uy8nkgRboKyv.jpg",
+          "production_companies": [
+            {
+              "id": 14758,
+              "logo_path": "/eCYPzcnF5KidrKPOT90ANslOKMx.png",
+              "name": "DCM Pictures",
+              "origin_country": "DE"
+            },
+            {
+              "id": 230,
+              "logo_path": null,
+              "name": "Boje Buck Produktion",
+              "origin_country": ""
+            },
+            {
+              "id": 11009,
+              "logo_path": null,
+              "name": "The Post Republic",
+              "origin_country": ""
+            },
+            {
+              "id": 4606,
+              "logo_path": "/otZHbf1HmzLRQsZFSqJXkf8EHz7.png",
+              "name": "ZDF",
+              "origin_country": "DE"
+            }
+          ],
+          "production_countries": [
+            {
+              "iso_3166_1": "DE",
+              "name": "Germany"
+            }
+          ],
+          "release_date": "2020-12-04",
+          "revenue": 0,
+          "runtime": 105,
+          "spoken_languages": [
+            {
+              "english_name": "English",
+              "iso_639_1": "en",
+              "name": "English"
+            },
+            {
+              "english_name": "Italian",
+              "iso_639_1": "it",
+              "name": "Italiano"
+            },
+            {
+              "english_name": "German",
+              "iso_639_1": "de",
+              "name": "Deutsch"
+            }
+          ],
+          "status": "Released",
+          "tagline": "",
+          "title": "Christmas Crossfire",
+          "video": false,
+          "vote_average": 4.8,
+          "vote_count": 26
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/cjaOSjsjV6cl3uXdJqimktT880L.jpg",
+          "belongs_to_collection": {
+            "id": 464577,
+            "name": "The Croods Collection",
+            "poster_path": "/ngKY2KzudNpC7j8a0OWjJRY0tHv.jpg",
+            "backdrop_path": "/8MjzBahFKCuQbwytpPPds7qboQa.jpg"
+          },
+          "budget": 65000000,
+          "genres": [
+            {
+              "id": 12,
+              "name": "Adventure"
+            },
+            {
+              "id": 14,
+              "name": "Fantasy"
+            },
+            {
+              "id": 10751,
+              "name": "Family"
+            },
+            {
+              "id": 16,
+              "name": "Animation"
+            }
+          ],
+          "homepage": "https://www.dreamworks.com/movies/the-croods-2",
+          "id": 529203,
+          "imdb_id": "tt2850386",
+          "original_language": "en",
+          "original_title": "The Croods: A New Age",
+          "overview": "After leaving their cave, the Croods encounter their biggest threat since leaving: another family called the Bettermans, who claim and show to be better and evolved. Grug grows suspicious of the Betterman parents, Phil and Hope,  as they secretly plan to break up his daughter Eep with her loving boyfriend Guy to ensure that their daughter Dawn has a loving and smart partner to protect her.",
+          "popularity": 1383.976,
+          "poster_path": "/tK1zy5BsCt1J4OzoDicXmr0UTFH.jpg",
+          "production_companies": [
+            {
+              "id": 33,
+              "logo_path": "/8lvHyhjr8oUKOOy2dKXoALWKdp0.png",
+              "name": "Universal Pictures",
+              "origin_country": "US"
+            },
+            {
+              "id": 521,
+              "logo_path": "/kP7t6RwGz2AvvTkvnI1uteEwHet.png",
+              "name": "DreamWorks Animation",
+              "origin_country": "US"
+            }
+          ],
+          "production_countries": [
+            {
+              "iso_3166_1": "US",
+              "name": "United States of America"
+            }
+          ],
+          "release_date": "2020-11-25",
+          "revenue": 35930000,
+          "runtime": 95,
+          "spoken_languages": [
+            {
+              "english_name": "English",
+              "iso_639_1": "en",
+              "name": "English"
+            }
+          ],
+          "status": "Released",
+          "tagline": "The future ain't what it used to be.",
+          "title": "The Croods: A New Age",
+          "video": false,
+          "vote_average": 8.1,
+          "vote_count": 354
         }
       ]
     },
@@ -53,6 +212,92 @@
           "poster_path": "/lhMIra0pqWNuD6CIXoTmGwZ0EBS.jpg",
           "vote_average": 6.2,
           "overview": "An eclectic foursome of aspiring teenage witches get more than they bargained for as they lean into their newfound powers."
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/zMcEalkxEiRjvmijliLBk0sYern.jpg",
+          "belongs_to_collection": null,
+          "budget": 0,
+          "genres": [
+            {
+              "id": 35,
+              "name": "Comedy"
+            },
+            {
+              "id": 80,
+              "name": "Crime"
+            },
+            {
+              "id": 53,
+              "name": "Thriller"
+            }
+          ],
+          "homepage": "http://www.netflix.com/title/81342028",
+          "id": 765123,
+          "imdb_id": "tt13446424",
+          "original_language": "de",
+          "original_title": "Wir Können Nicht Anders",
+          "overview": "A man foils an attempted murder, then flees the crew of would-be killers along with their intended target as a woman he's just met tries to find him.",
+          "popularity": 1323.562,
+          "poster_path": "/ajKpYK7XdzIYjy9Uy8nkgRboKyv.jpg",
+          "production_companies": [
+            {
+              "id": 14758,
+              "logo_path": "/eCYPzcnF5KidrKPOT90ANslOKMx.png",
+              "name": "DCM Pictures",
+              "origin_country": "DE"
+            },
+            {
+              "id": 230,
+              "logo_path": null,
+              "name": "Boje Buck Produktion",
+              "origin_country": ""
+            },
+            {
+              "id": 11009,
+              "logo_path": null,
+              "name": "The Post Republic",
+              "origin_country": ""
+            },
+            {
+              "id": 4606,
+              "logo_path": "/otZHbf1HmzLRQsZFSqJXkf8EHz7.png",
+              "name": "ZDF",
+              "origin_country": "DE"
+            }
+          ],
+          "production_countries": [
+            {
+              "iso_3166_1": "DE",
+              "name": "Germany"
+            }
+          ],
+          "release_date": "2020-12-04",
+          "revenue": 0,
+          "runtime": 105,
+          "spoken_languages": [
+            {
+              "english_name": "English",
+              "iso_639_1": "en",
+              "name": "English"
+            },
+            {
+              "english_name": "Italian",
+              "iso_639_1": "it",
+              "name": "Italiano"
+            },
+            {
+              "english_name": "German",
+              "iso_639_1": "de",
+              "name": "Deutsch"
+            }
+          ],
+          "status": "Released",
+          "tagline": "",
+          "title": "Christmas Crossfire",
+          "video": false,
+          "vote_average": 4.8,
+          "vote_count": 26
         }
       ]
     },

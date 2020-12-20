@@ -27,8 +27,12 @@
 }
 
 .movie-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: auto;
     height: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
     background-color:black;
     margin: 20px;
 }
@@ -37,12 +41,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top:20px;
 }
 
 .movie-item-title-container {
     display: flex;
     justify-content: space-between;
+    padding-left: 8px;
+    padding-right: 8px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
