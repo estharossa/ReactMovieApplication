@@ -6,6 +6,7 @@ import instance from "./db/axios";
 import User from "./Model/User";
 import Details from "./Model/Details";
 import AuthState from "./Model/AuthState";
+import {Provider} from "react-redux";
 
 const API_USERS = '/people'
 
