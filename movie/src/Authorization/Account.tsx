@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext,useReducer } from 'react'
 import { Redirect } from 'react-router-dom';
 import AuthContext from '../Context/AuthContext';
 import './Account.css'
