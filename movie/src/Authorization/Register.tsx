@@ -1,4 +1,4 @@
-import React, { ReactElement, useContext, useState} from 'react'
+import React, {ReactElement, useContext, useState} from 'react'
 import {Redirect} from 'react-router-dom';
 import AuthContext from '../Context/AuthContext';
 import User from '../Model/User';
@@ -19,8 +19,6 @@ export default function Register({lastIndex, register}: Props): ReactElement {
     const authState = useContext(AuthContext)
 
     function createUser(): User {
-        console.log("Username: " + username)
-        console.log("Password: " + password)
         return {id: lastIndex, username: username, password: password, favourites: []}
     }
 
@@ -36,7 +34,6 @@ export default function Register({lastIndex, register}: Props): ReactElement {
         <div className={css.input_container}>
             <div className={css.input_card}>
                 <h1>Registration</h1>
-                <input type='email' placeholder='Email...' onChange={(e) => setEmail(e.target.value)}/>
                 <input type='text' placeholder='Username...' onChange={(e) => setUsername(e.target.value)}/>
                 <input type='password' placeholder='Password...' onChange={(e) => setPassword(e.target.value)}/>
                 <button onClick={() => validate()}>Register</button>
