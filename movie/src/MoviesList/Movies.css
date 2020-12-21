@@ -13,17 +13,19 @@
 }
 
 .movies-page-container input {
-    padding: 6px;
+    margin-top: 16px;
+    width: 30%;
+    padding: 12px;
     border-radius: 8px;
     margin-right: 12px;
 }
 
-.movies-container{
+.movies-container {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
     justify-content: space-around;
-    background-color:rgb(37, 38, 46);
+    background-color: rgb(37, 38, 46);
 }
 
 .movie-item {
@@ -32,8 +34,8 @@
     justify-content: space-between;
     width: auto;
     height: auto;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    background-color:black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-color: black;
     margin: 20px;
 }
 
@@ -46,16 +48,13 @@
 .movie-item-title-container {
     display: flex;
     justify-content: space-between;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 8px;
 }
 
 .movie-item-title-container h3 {
     font-size: 20px;
     text-decoration: none;
-    color:white
+    color: white
 }
 
 .movie-item-title-container h4 {
@@ -63,16 +62,18 @@
     text-decoration: none;
 }
 
-.movies-container a:link{
+.movies-container a:link {
     text-decoration: none;
 }
 
-.green-title{
-    color:green;
+.green-title {
+    color: green;
 }
-.yellow-title{
-    color:yellow;
+
+.yellow-title {
+    color: yellow;
 }
-.red-title{
-    color:red;
+
+.red-title {
+    color: red;
 }

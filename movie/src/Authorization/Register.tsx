@@ -1,25 +1,48 @@
-import React, {ReactElement, useContext, useState} from 'react'
+import React, {ReactElement, useContext, useEffect, useState} from 'react'
 import {Redirect} from 'react-router-dom';
 import AuthContext from '../Context/AuthContext';
 import User from '../Model/User';
 import css from './Register.module.css'
+import {useDispatch, useSelector} from "react-redux";
+import AuthState from "../Model/AuthState";
+import instance from "../db/axios";
+import {AuthAction} from "../Model/AuthAction.enum";
 
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
 interface Props {
-    lastIndex: number,
-    register: (user: User) => void
 }
 
-export default function Register({lastIndex, register}: Props): ReactElement {
+const API_USERS = '/people'
+
+export default function Register({}: Props): ReactElement {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('')
+    const [users, setUsers] = useState<User[]>([])
 
-    const authState = useContext(AuthContext)
+    const authState = useSelector<AuthState>((state: AuthState) => state) as AuthState
+    const dispatch = useDispatch()
 
-    function createUser(): User {
-        return {id: lastIndex, username: username, password: password, favourites: []}
+    useEffect(() => {
+        async function fetchUsers() {
+            const result = await instance.get(API_USERS)
+            setUsers([...result.data])
+        }
+
+        fetchUsers()
+    }, [])
+
+    async function createUser() {
+        const isPresent = !!users.find((u) => u.username === username)
+        if (isPresent) {
+            // TODO handle case when the user is already registered
+            return
+        } else {
+            let user: User = {id: users.length, username: username, password: password, favourites: []}
+            const result = await instance.post(API_USERS, user)
+            dispatch({type: AuthAction.REGISTER, user: user})
+        }
     }
 
     function validate() {
@@ -27,7 +50,7 @@ export default function Register({lastIndex, register}: Props): ReactElement {
             alert("There are some missing fields.")
             return
         }
-        register(createUser())
+        createUser()
     }
 
     return (

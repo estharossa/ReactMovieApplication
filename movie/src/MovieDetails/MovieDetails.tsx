@@ -4,23 +4,28 @@ import movieApi from '../Api/MovieApi';
 import AuthContext from '../Context/AuthContext';
 import Details from '../Model/Details';
 import './MovieDetails.css'
+import instance from "../db/axios";
+import {useDispatch, useSelector} from "react-redux";
+import AuthState from "../Model/AuthState";
+import {AuthAction} from "../Model/AuthAction.enum";
 
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500'
 const DEFAULT_IMAGE_URL = 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/space-movie-poster-design-template-18133e937d93002c68b4649ea234d75f_screen.jpg?ts=1573539500'
 
 interface Props {
-    add: (details: Details) => void
 }
 
-export default function MovieDetails({add}: Props): ReactElement {
+const API_USERS = '/people'
+
+export default function MovieDetails({}: Props): ReactElement {
     const match = useRouteMatch<{ id: string }>();
     const [movieDetails, setMovieDetails] = useState<Details>(
         {id: 0, title: "", poster_path: "", vote_average: 0, overview: ""}
     )
-    const authState = useContext(AuthContext)
-    const isPresent = !!authState.user?.favourites.find((movie) => movie.id == movieDetails.id)
-    const [isAlreadyPresent, setIsAlreadyPresent] = useState<Boolean>(isPresent)
+    const authState = useSelector<AuthState>((state: AuthState) => state) as AuthState
+    const [isAlreadyPresent, setIsAlreadyPresent] = useState<Boolean>(false)
     const details_query = '3/movie/' + match.params.id + '?api_key=b82c172e7bf6660516881c6a1ed616dd'
+    const dispatch = useDispatch()
 
     useEffect(() => {
         async function fetchMovieDetails() {
@@ -40,9 +45,17 @@ export default function MovieDetails({add}: Props): ReactElement {
         fetchMovieDetails()
     }, [])
 
-    function addToFavourites() {
+    async function addToFavourites() {
+        let user = authState.user
+        let isMoviePresent = user?.favourites.find((movie) => movie.id === movieDetails.id) != null
+
+        if (!isMoviePresent) {
+            user?.favourites.push(movieDetails)
+            const response = await instance.patch(`${API_USERS}/${user?.id}`, user)
+            dispatch({type: AuthAction.UPDATE, user: user})
+        }
+
         setIsAlreadyPresent(true)
-        add(movieDetails)
     }
 
     return (

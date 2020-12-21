@@ -2,12 +2,16 @@ import React, {ReactElement, useContext} from "react";
 import {Link} from 'react-router-dom'
 import AuthContext from "../Context/AuthContext";
 import './Navbar.css'
+import {useSelector} from "react-redux";
+import AuthState from "../Model/AuthState";
 
 interface Props {
 }
 
 export default function NavBar({}: Props): ReactElement {
-    const authState = useContext(AuthContext)
+    // const authState = useContext(AuthContext)
+    const authState = useSelector<AuthState>((state: AuthState) => state) as AuthState
+    console.log(authState)
 
     return (
         <div className="nav-bar">

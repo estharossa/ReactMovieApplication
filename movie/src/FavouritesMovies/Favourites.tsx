@@ -2,9 +2,13 @@ import React, {Fragment, ReactElement, useContext, useEffect, useReducer, useSta
 import {Link} from 'react-router-dom'
 import AuthContext from '../Context/AuthContext'
 import '../MoviesList/Movies.css'
+import {useSelector} from "react-redux";
+import AuthState from "../Model/AuthState";
 
 export default function Favourites(): ReactElement {
-    const authState = useContext(AuthContext)
+    // const authState = useContext(AuthContext)
+    const authState = useSelector<AuthState>((state: AuthState) => state) as AuthState
+
     const movies = authState.user?.favourites
 
     console.log(authState)

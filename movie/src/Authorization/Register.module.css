@@ -15,7 +15,7 @@
     justify-content: center;
     background: #ffffff;
     padding: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
 }
 
@@ -29,6 +29,16 @@
     width: 60%;
     margin: 5px;
     padding: 8px;
+}
+
+.input_card h2 {
+    margin-bottom: 12px;
+    color: #202123;
+}
+
+.input_card span {
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .input_card button {

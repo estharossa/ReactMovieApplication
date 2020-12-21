@@ -21,7 +21,6 @@ function Movies(): ReactElement {
 
     async function fetchMovies() {
         const response = await movieApi.get(movies_query)
-        console.log(response)
         const movies = response.data.results
         setMovies(movies)
     }
@@ -52,7 +51,7 @@ function Movies(): ReactElement {
     return (
         <div className='movies-page-container'>
             <div className="search-container">
-                <input type='text' placeholder='Find Movie...' onChange={(e) => setQuery(e.target.value)}></input>
+                <input type='text' placeholder='Find Movie...' onChange={(e) => setQuery(e.target.value)}/>
             </div>
             <div className={'movies-container'}>
                 {movies && movies.map(({id, title, poster_path, vote_average}) => (
