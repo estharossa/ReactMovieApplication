@@ -1,4 +1,4 @@
-import React, {ReactElement, useContext, useEffect, useState} from 'react'
+import React, {ReactElement, useCallback, useContext, useEffect, useState} from 'react'
 import {Redirect} from 'react-router-dom';
 import css from './Register.module.css'
 import {useDispatch, useSelector} from "react-redux";
@@ -20,6 +20,14 @@ export default function Login({}: Props): ReactElement {
     const authState = useSelector<AuthState>((state: AuthState) => state) as AuthState
     const dispatch = useDispatch()
 
+    const loginOnChange = useCallback(e=>{
+        setUsername(e.target.value)
+    },[])
+    const passwordOnChange = useCallback(e=>{
+        setPassword(e.target.value)
+    },[])
+
+
     useEffect(() => {
         async function fetchUsers() {
             const result = await instance.get(API_USERS)
@@ -32,6 +40,7 @@ export default function Login({}: Props): ReactElement {
     function authenticateUser() {
         const isPresent = users.find((user) => user.username === username && user.password === password) != null
         const user = users.find((user) => user.username === username && user.password === password)
+        console.log("clicked")
         if (isPresent) {
             dispatch({type: AuthAction.LOGIN, user: user})
         } else {
@@ -43,8 +52,8 @@ export default function Login({}: Props): ReactElement {
         <div className={css.input_container}>
             <div className={css.input_card}>
                 <h1>Login</h1>
-                <input type='text' placeholder='Username...' onChange={(e) => setUsername(e.target.value)}/>
-                <input type='password' placeholder='Password...' onChange={(e) => setPassword(e.target.value)}/>
+                <input type='text' placeholder='Username...' onChange={loginOnChange}/>
+                <input type='password' placeholder='Password...' onChange={passwordOnChange}/>
                 <button onClick={authenticateUser}>Login</button>
                 {authState.isLogged ? <Redirect to='/account'/> : null}
             </div>
