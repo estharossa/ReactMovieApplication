@@ -58,6 +58,9 @@ export default function MovieDetails({}: Props): ReactElement {
         setIsAlreadyPresent(true)
     }
 
+    if (movieDetails.title === 'Ten') {
+        throw new Error('Bad Movie')
+    }
     return (
         <div className={'movie-details-container'}>
             <div className={'movie-details-mini-container'}>
